@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduzindo JSX</title>
+    
+</head>
+<body>
+    <h1>Exemplo 1</h1>
+    <div id="root"></div>
+    
+    <h1>Exemplo 2</h1>
+    <h2>Incorporando Expressões em JSX</h2>
+    <div id="root2"></div>
+
+ 
+    
+    <script type="text/babel"> // sem o type-- n roda
+        const name = 'Edmar Miller';
+        const element = <h3>Olá, {name}.</h3> // aqui temos uma declaração JSX
+
+        ReactDOM.render(
+            element, // o que queremos imprimir
+            document.getElementById('root') // onde queremos
+        );
+
+        // Inicio do script exemplo 2
+
+        function formatName(user) 
+            {
+                return user.firstName + ' ' + user.lastName; 
+            }
+        const user = 
+        {
+            firstName: 'Edmar',
+            lastName: 'Miller'
+        };
+        const element2 = 
+        (
+            <h3>
+            Hello, {formatName(user)}
+            </h3>
+        );
+            ReactDOM.render
+            (
+                element2,
+                document.getElementById('root2')
+            );
+            
+     
+    </script>
+
+        
+      
+
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+</body>
+</html>

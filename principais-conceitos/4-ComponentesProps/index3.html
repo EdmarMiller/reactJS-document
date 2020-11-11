@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extraindo Componentes</title>
+    
+</head>
+<body>
+    <h1>Extraindo Componentes</h1>
+
+     <div id="root"></div>
+     
+     <script type="text/babel">
+        
+        function Welcome(props) 
+        {
+           return <h1>Hello, {props.name} {props.idade}.</h1>;
+        }
+
+        function App() {
+           return (
+              <div>
+                <Welcome name="Edmar" idade= '25' />
+                <Welcome name="Clau" idade= '25' />
+                <Welcome name="Miller"idade= '25' /> 
+              </div>
+           );
+        }
+        
+        ReactDOM.render(
+            <App />, document.getElementById('root')
+        );
+     </script>
+
+ 
+      
+
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+</body>
+</html>

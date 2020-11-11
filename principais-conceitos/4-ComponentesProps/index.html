@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes e Props</title>
+    
+</head>
+<body>
+    <h1>Componentes de Função e Classe</h1>
+
+     <div id="root"></div>
+     
+     <script type="text/babel">
+        
+        function Welcome(props) 
+        {
+           return <h1>Hello, {props.name}</h1>;
+        }
+        const element = <Welcome name ="Edmar Miller" />;
+        ReactDOM.render(
+            element, document.getElementById('root')
+        );
+     </script>
+
+    <h1>Nota: Sempre inicie os nomes dos componentes com uma letra maiúscula.</h1>
+      
+
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+</body>
+</html>
